@@ -1,9 +1,13 @@
-<h1>New List</h1>
-<%= form_with model: @list, local: true do |f| %>
+<h1>Create a New List</h1>
+
+<%= simple_form_for @list do |f| %>
   <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control" %>
+    <%= f.input :name, label: "List Name", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.input :image_url, label: "Image URL (optional)", class: "form-control" %>
   </div>
   <%= f.submit "Create List", class: "btn btn-primary" %>
 <% end %>
+
 <%= link_to "Back to All Lists", lists_path, class: "btn btn-secondary" %>

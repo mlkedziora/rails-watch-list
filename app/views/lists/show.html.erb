@@ -5,7 +5,9 @@
   <% @list.bookmarks.each do |bookmark| %>
     <li>
       <strong><%= bookmark.movie.title %></strong>: <%= bookmark.comment %>
-      <%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+      <%= form_with model: bookmark, url: bookmark_path(bookmark), method: :delete, class: "inline-form" do %>
+        <%= submit_tag "Delete", class: "delete-link" %>
+      <% end %>
     </li>
   <% end %>
 </ul>

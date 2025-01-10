@@ -1,0 +1,20 @@
+.list-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-right: 10px;
+  color: #007bff;
+
+  &:hover {
+    text-decoration: none;
+    color: #0056b3;
+  }
+}
+
+.delete-link {
+  color: #ff0000;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
